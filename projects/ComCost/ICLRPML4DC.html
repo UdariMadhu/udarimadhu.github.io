@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <title>Project Webpage</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "HelveticaNeue-Light", Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    h1 {
+      line-height: 1.3em;
+    }
+
+    a {
+      color: #d87d05;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #994301;
+    }
+
+    /* CSS for major elements */
+    .toprule {
+      margin-top: 0px;
+      border: 0;
+      height: 8px;
+      background: #eb8400;
+    }
+
+    .container {
+      max-width: 950px;
+      margin: 0px auto;
+    }
+
+    .container h1 {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 2em;
+    }
+
+    .container p {
+      text-align: center;
+      font-size: 1.2em;
+    }
+
+    .container p a {
+      margin: 20px;
+      text-decoration: none;
+    }
+
+    .flexcontainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .flexcontainer .author {
+      margin: 10px 20px;
+    }
+
+    .section-divider {
+      border: 0;
+      height: 0;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      margin: 20px 0px;
+    }
+
+    .image-container {
+      width: 90%;
+      margin: 10px auto;
+      text-align: center;
+    }
+
+    .image-container img {
+      width: 70%;
+    }
+
+    .image-container .caption {
+      font-style: oblique;
+      text-align: left;
+    }
+
+    .rel-work-list li {
+      margin: 10px, auto;
+      padding: 5px 10px;
+    }
+
+    pre,
+    code {
+      font-size: 0.9em;
+      border: 1px solid #e8e8e8;
+      border-radius: 3px;
+      background-color: #eef;
+    }
+
+    pre {
+      padding: 5px 10px;
+      overflow-x: auto;
+    }
+
+    .bottomrule {
+      margin-bottom: 0px;
+      border: 0;
+      height: 8px;
+      background: #eb8400;
+    }
+  </style>
+
+<body>
+  <hr class="toprule" />
+
+  <div class="top container">
+    <h1>Distributed Learning: Sequential Decision Making in Resource-Constrained Environments.</h1>
+    <div class="flexcontainer">
+      <div class="author">
+        Udari Madhushani <br />
+        Princeton Universiery
+      </div>
+      <div class="author">
+        Naomi Leonard <br />
+        Princeton Universiery
+      </div>
+    </div>
+
+    <div class="flexcontainer">
+      <div class="author">
+        ICLR workshop on Practical Machine Learning for Developing Countries
+        <a href="https://pml4dc.github.io/iclr2020/">PML4DC@ICLR</a> 2020
+      </div>
+    </div>
+
+    <p class="links">
+      <span><a href="https://pml4dc.github.io/iclr2020/papers/PML4DC2020_11.pdf">Pdf</a></span>
+      <span><a href="#bibtex">Bibtex</a></span>
+      <span><a href="https://pml4dc.github.io/iclr2020/pdf/PML4DC2020_11.pdf">Slides</a></span>
+    </p>
+    <hr class="section-divider" />
+  </div>
+
+  <div class="content container">
+    <h2>Overview</h2>
+    <div class="data">
+      <div class="image-container">
+        <img src="ICLR20ProjFig.png" alt="project" />
+      </div>
+      We study cost-effective communication strategies that can be used to improve the performance of distributed
+      learning systems in resource-constrained environments.
+      For distributed learning in sequential decision making, we propose a new cost-effective partial communication
+      protocol. We illustrate that with this protocol the group obtains the same order of performance that it obtains
+      with full communication. Moreover, we prove that under the proposed partial communication protocol the
+      communication cost is \(O(\log T)\), where \(T\) is the time horizon of the decision-making process. This improves
+      significantly on protocols with full communication, which incur a communication cost that is \(O(T)\). We validate
+      our theoretical results using numerical simulations.
+    </div>
+    <hr class="section-divider" />
+    <div class="content container">
+      <h2>Other related works</h2>
+      <div class="rel-work-list">
+        <ul>
+          <li>
+            <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9143736">A Dynamic Observation Strategy
+              for Multi-agent
+              Multi-armed Bandit Problem.</a>
+            <br />
+            Udari Madhushani, Naomi Leonard; ECC 2020.
+          </li>
+          <li>
+            <a href="https://openreview.net/pdf?id=SJxZnR4YvB">Distributed Bandit Learning: Near-Optimal Regret with
+              Efficient Communication.</a>
+            <br />
+            Yuanhao Wang, Jiachen Hu, Xiaoyu Chen, Liwei Wang; ICLR 2020.
+          </li>
+        </ul>
+      </div>
+      <hr class="section-divider" />
+    </div>
+    <div class="content container">
+      <h2 id="bibtex">Bibtex</h2>
+      <div class="data">
+        <pre>
+@article{madhushani2020distributed,
+  title={Distributed Learning: Sequential Decision Making in Resource-Constrained Environments},
+  author={Madhushani, Udari and Leonard, Naomi Ehrich},
+  journal={ICLR workshop on Practical Machine Learning for Developing Countries},
+  year={2020}
+}
+</pre>
+      </div>
+    </div>
+  </div>
+  <hr class="bottomrule" />
+</body>
+</head>

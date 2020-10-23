@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <title>Project Webpage</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "HelveticaNeue-Light", Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    h1 {
+      line-height: 1.3em;
+    }
+
+    a {
+      color: #d87d05;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #994301;
+    }
+
+    /* CSS for major elements */
+    .toprule {
+      margin-top: 0px;
+      border: 0;
+      height: 8px;
+      background: #eb8400;
+    }
+
+    .container {
+      max-width: 950px;
+      margin: 0px auto;
+    }
+
+    .container h1 {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 2em;
+    }
+
+    .container p {
+      text-align: center;
+      font-size: 1.2em;
+    }
+
+    .container p a {
+      margin: 20px;
+      text-decoration: none;
+    }
+
+    .flexcontainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .flexcontainer .author {
+      margin: 10px 20px;
+    }
+
+    .section-divider {
+      border: 0;
+      height: 0;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      margin: 20px 0px;
+    }
+
+    .image-container {
+      width: 90%;
+      margin: 10px auto;
+      text-align: center;
+    }
+
+    .image-container img {
+      width: 70%;
+    }
+
+    .image-container .caption {
+      font-style: oblique;
+      text-align: left;
+    }
+
+    .rel-work-list li {
+      margin: 10px, auto;
+      padding: 5px 10px;
+    }
+
+    pre,
+    code {
+      font-size: 0.9em;
+      border: 1px solid #e8e8e8;
+      border-radius: 3px;
+      background-color: #eef;
+    }
+
+    pre {
+      padding: 5px 10px;
+      overflow-x: auto;
+    }
+
+    .bottomrule {
+      margin-bottom: 0px;
+      border: 0;
+      height: 8px;
+      background: #eb8400;
+    }
+  </style>
+
+<body>
+  <hr class="toprule" />
+
+  <div class="top container">
+    <h1>Feedback Regularization and Geometric PID Control for Robust
+      Stabilization of a Planar Three-link Hybrid Bipedal Walking Model.</h1>
+    <div class="flexcontainer">
+      <div class="author">
+        Lasitha Weerakon <br />
+        Peradeniya University
+      </div>
+      <div class="author">
+        Udari Madhushani <br />
+        Sri Lanka Technological Campus
+      </div>
+      <div class="author">
+        Sanjeeva Maithripala <br />
+        Peradeniya University
+      </div>
+      <div class="author">
+        Jordan Berg <br />
+        Texas Tech University
+      </div>
+    </div>
+
+    <div class="flexcontainer">
+      <div class="author">
+        American Control Conference
+        <a href="http://acc2018.a2c2.org/">ACC</a> 2018
+      </div>
+    </div>
+
+    <p class="links">
+      <span><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8431829">Pdf</a></span>
+      <span><a href="#bibtex">Bibtex</a></span>
+      <span><a
+          href="https://drive.google.com/file/d/1EOQnQU99tMj1OIgItMmBeEzVIZswtmFV/view?usp=sharing">Slides</a></span>
+      <span><a href="https://youtu.be/xLQpTPiF7Tc">Video</a></span>
+    </p>
+    <hr class="section-divider" />
+  </div>
+
+  <div class="content container">
+    <div class="data">
+      <div class="image-container">
+        <iframe width="850" height="420" src="https://youtube.com/embed/xLQpTPiF7Tc">
+        </iframe>
+        <!-- <img src="documents/teaser.png" alt="project" /> -->
+      </div>
+      <h2>Overview</h2>
+      This paper applies a recently developed
+      geometric PID controller to stabilize a three-link planar
+      bipedal hybrid dynamic walking robot. The three links
+      represent the robot torso and two kneeless legs, with an
+      independent control torque available at each hip joint. The
+      geometric PID controller is derived for fully actuated
+      mechanical systems, however in the swing phase the
+      three-link biped robot has three degrees of freedom and only
+      two controls. Following the bipedal walking literature,
+      underactuation is addressed by choosing two “virtual
+      constraints” to enforce, and verifying the stability of the
+      resulting two-dimensional zero dynamics. The resulting
+      controlled dynamics do not have the structure of a mechanical
+      system, however this structure is restored using “feedback
+      regularization,” following which geometric PID control is used
+      to provide robust asymptotic regulation of the virtual
+      constraints. The proposed method can tolerate significantly
+      greater variations in inclination, showing the value of the
+      geometric methods, and the benefit of integral action.
+    </div>
+    <div class="image-container">
+      <img src="BipedMod.png" alt="project" />
+      <div class="caption">
+        Planar three link biped walker on an inclined plane with lumped
+        masses consisting of a torso and two equal length legs connected to the
+        torso at the hip. The coordinates \(q = (q1, q2, q3)\)
+        T are used to prescribe
+        the configuration. A control moment is applied at the hip joint between each
+        leg and the torso.
+      </div>
+    </div>
+    <div class="image-container">
+      <img src="Biped.png" alt="project" />
+      <div class="caption">
+        Numerical simulation results. In left figures desired torso angle is \(110^o\) and in right figures desired
+        torso angle is \(0^o\)
+      </div>
+    </div>
+    <hr class="section-divider" />
+    <div class="content container">
+      <h2 id="bibtex">Bibtex</h2>
+      <div class="data">
+        <pre>
+@inproceedings{weerakoon2018feedback,
+  title={Feedback Regularization and Geometric PID Control for Robust Stabilization of a Planar Three-link Hybrid Bipedal Walking Model},
+  author={Weerakoon, WMLT and Madhushani, TWU and Maithripala, DHS and Berg, Jordan M},
+  booktitle={2018 Annual American Control Conference (ACC)},
+  pages={6061--6066},
+  year={2018},
+  organization={IEEE}
+}
+</pre>
+      </div>
+    </div>
+  </div>
+  <hr class="bottomrule" />
+</body>
+</head>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <title>Project Webpage</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "HelveticaNeue-Light", Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    h1 {
+      line-height: 1.3em;
+    }
+
+    a {
+      color: #d87d05;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #994301;
+    }
+
+    /* CSS for major elements */
+    .toprule {
+      margin-top: 0px;
+      border: 0;
+      height: 8px;
+      background: #eb8400;
+    }
+
+    .container {
+      max-width: 950px;
+      margin: 0px auto;
+    }
+
+    .container h1 {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 2em;
+    }
+
+    .container p {
+      text-align: center;
+      font-size: 1.2em;
+    }
+
+    .container p a {
+      margin: 20px;
+      text-decoration: none;
+    }
+
+    .flexcontainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .flexcontainer .author {
+      margin: 10px 20px;
+    }
+
+    .section-divider {
+      border: 0;
+      height: 0;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      margin: 20px 0px;
+    }
+
+    .image-container {
+      width: 90%;
+      margin: 10px auto;
+      text-align: center;
+    }
+
+    .image-container img {
+      width: 70%;
+    }
+
+    .image-container .caption {
+      font-style: oblique;
+      text-align: left;
+    }
+
+    .rel-work-list li {
+      margin: 10px, auto;
+      padding: 5px 10px;
+    }
+
+    pre,
+    code {
+      font-size: 0.9em;
+      border: 1px solid #e8e8e8;
+      border-radius: 3px;
+      background-color: #eef;
+    }
+
+    pre {
+      padding: 5px 10px;
+      overflow-x: auto;
+    }
+
+    .bottomrule {
+      margin-bottom: 0px;
+      border: 0;
+      height: 8px;
+      background: #eb8400;
+    }
+  </style>
+
+<body>
+  <hr class="toprule" />
+
+  <div class="top container">
+    <h1>Semi-globally Exponential Trajectory Tracking for a Class of
+      Spherical Robots.</h1>
+    <div class="flexcontainer">
+      <div class="author">
+        Udari Madhushani <br />
+        Sri Lanka Technological Campus
+      </div>
+      <div class="author">
+        Sanjeeva Maithripala <br />
+        Peradeniya University
+      </div>
+      <div class="author">
+        Janaka Wijayakulasooriya <br />
+        Peradeniya University
+      </div>
+      <div class="author">
+        Jordan Berg <br />
+        Texas Tech University
+      </div>
+    </div>
+
+    <div class="flexcontainer">
+      <div class="author">
+        <a href="https://www.journals.elsevier.com/automatica">Automatica</a> 2017
+      </div>
+    </div>
+
+    <p class="links">
+      <span><a href="https://www.sciencedirect.com/science/article/pii/S0005109817304090?via%3Dihub">Pdf</a></span>
+      <span><a href="#bibtex">Bibtex</a></span>
+    </p>
+    <hr class="section-divider" />
+  </div>
+
+  <div class="content container">
+    <div class="data">
+      <div class="image-container">
+        <!-- <img src="documents/teaser.png" alt="project" /> -->
+      </div>
+      <h2>Overview</h2>
+      A spherical robot consists of an externally spherical rigid body rolling on a two-dimensional surface, actuated by
+      an auxiliary mechanism. For a class of actuation mechanisms, we derive a controller for the geometric center of
+      the sphere to asymptotically track any sufficiently smooth reference trajectory, with robustness to bounded,
+      constant uncertainties in the inertial properties of the sphere and actuation mechanism, and to constant
+      disturbance forces including, for example, from constant inclination of the rolling surface. The sphere and
+      actuator are modeled as distinct systems, coupled by reaction forces. It is assumed that the actuator can provide
+      three independent control torques, and that the actuator center of mass remains at a constant distance from the
+      geometric center of the sphere. We show that a necessary and sufficient condition for such a controller to exist
+      is that for any constant disturbance torque acting on the sphere there is a constant input such that the sphere
+      and the actuator mechanism has a stable relative equilibrium. A geometric PID controller guarantees robust,
+      semi-global, locally exponential stability for the position tracking error of the geometric center of the sphere,
+      while ensuring that actuator velocities are bounded.
+    </div>
+    <div class="image-container">
+      <img src="AutomaticaProjFig.png" alt="project" />
+      <div class="caption">
+        Simulation results for a spherical robot actuated by an omni directional wheel driven cart.
+      </div>
+    </div>
+    <hr class="section-divider" />
+    <div class="content container">
+      <h2 id="bibtex">Bibtex</h2>
+      <div class="data">
+        <pre>
+@article{madhushani2017semi,
+  title={Semi-globally exponential trajectory tracking for a class of spherical robots},
+  author={Madhushani, TWU and Maithripala, DHS and Wijayakulasooriya, JV and Berg, Jordan M},
+  journal={Automatica},
+  volume={85},
+  pages={327--338},
+  year={2017},
+  publisher={Elsevier}
+}
+</pre>
+      </div>
+    </div>
+  </div>
+  <hr class="bottomrule" />
+</body>
+</head>

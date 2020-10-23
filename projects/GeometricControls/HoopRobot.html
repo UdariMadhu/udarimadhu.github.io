@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <title>Project Webpage</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "HelveticaNeue-Light", Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    h1 {
+      line-height: 1.3em;
+    }
+
+    a {
+      color: #d87d05;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #994301;
+    }
+
+    /* CSS for major elements */
+    .toprule {
+      margin-top: 0px;
+      border: 0;
+      height: 8px;
+      background: #eb8400;
+    }
+
+    .container {
+      max-width: 950px;
+      margin: 0px auto;
+    }
+
+    .container h1 {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 2em;
+    }
+
+    .container p {
+      text-align: center;
+      font-size: 1.2em;
+    }
+
+    .container p a {
+      margin: 20px;
+      text-decoration: none;
+    }
+
+    .flexcontainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .flexcontainer .author {
+      margin: 10px 20px;
+    }
+
+    .section-divider {
+      border: 0;
+      height: 0;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      margin: 20px 0px;
+    }
+
+    .image-container {
+      width: 90%;
+      margin: 10px auto;
+      text-align: center;
+    }
+
+    .image-container img {
+      width: 70%;
+    }
+
+    .image-container .caption {
+      font-style: oblique;
+      text-align: left;
+    }
+
+    .rel-work-list li {
+      margin: 10px, auto;
+      padding: 5px 10px;
+    }
+
+    pre,
+    code {
+      font-size: 0.9em;
+      border: 1px solid #e8e8e8;
+      border-radius: 3px;
+      background-color: #eef;
+    }
+
+    pre {
+      padding: 5px 10px;
+      overflow-x: auto;
+    }
+
+    .bottomrule {
+      margin-bottom: 0px;
+      border: 0;
+      height: 8px;
+      background: #eb8400;
+    }
+  </style>
+
+<body>
+  <hr class="toprule" />
+
+  <div class="top container">
+    <h1>Feedback Regularization and Geometric PID Control for Trajectory
+      Tracking of Mechanical Systems: Hoop Robots on an Inclined Plane.</h1>
+    <div class="flexcontainer">
+      <div class="author">
+        Udari Madhushani <br />
+        Sri Lanka Technological Campus
+      </div>
+      <div class="author">
+        Sanjeeva Maithripala <br />
+        Peradeniya University
+      </div>
+      <div class="author">
+        Jordan Berg <br />
+        Texas Tech University
+      </div>
+    </div>
+
+    <div class="flexcontainer">
+      <div class="author">
+        American Control Conference
+        <a href="http://acc2017.a2c2.org/">ACC</a> 2017
+      </div>
+    </div>
+
+    <p class="links">
+      <span><a href="https://ieeexplore.ieee.org/document/7963558">Pdf</a></span>
+      <span><a href="#bibtex">Bibtex</a></span>
+      <span><a
+          href="https://drive.google.com/file/d/1HO0EMkTbaWzw7uwpY7LZ9gS8r65U6f5Q/view?usp=sharing">Slides</a></span>
+      <!-- <span><a href="https://youtu.be/xLQpTPiF7Tc">Video</a></span> -->
+    </p>
+    <hr class="section-divider" />
+  </div>
+
+  <div class="content container">
+    <div class="data">
+      <div class="image-container">
+        <!-- <iframe width="850" height="420" src="https://youtu.be/xLQpTPiF7Tc">
+        </iframe> -->
+        <!-- <img src="documents/teaser.png" alt="project" /> -->
+      </div>
+      <h2>Overview</h2>
+      This work applies geometric PID control for
+      asymptotic tracking of a desired trajectory by a hoop robot
+      in the presence of disturbances and uncertainties. The hoop
+      robot, consisting of a circular body rolling without slip along
+      a one-dimensional surface, is a planar analog of a spherical
+      robot. A variety of coupled mechanical system may be used to
+      actuate the hoop robot. This paper specifically considers two
+      different actuators, one a simple pendulum and the other an
+      internal cart. The geometric PID controller requires the plant
+      to be a simple mechanical system, and the hoop robot does
+      not satisfy this condition. Therefore a geometric inner loop is
+      presented that gives the hoop robot the required structure. This
+      procedure is here referred to as feedback regularization. Feedback regularization—in contrast to feedback
+      linearization—is
+      coordinate independent, and hence reflects the fundamental
+      system structure. Note also that the resulting mechanical system
+      is nonlinear and underactuated. Subsequently, the geometric
+      PID outer loop guarantees almost-semiglobal tracking with
+      locally exponential convergence, and the integral action of the
+      PID guarantees robustness to constant disturbances and parameter uncertainties, including constant inclination of
+      the rolling
+      surface. The complete tracking controller is the composition
+      of the two coordinate-indep
+    </div>
+    <div class="image-container">
+      <img src="HoopRobot.png" alt="project" />
+      <div class="caption">
+        Numerical simulation results for a trajectory tracking hoop robot..
+      </div>
+    </div>
+    <hr class="section-divider" />
+    <div class="content container">
+      <h2 id="bibtex">Bibtex</h2>
+      <div class="data">
+        <pre>
+@inproceedings{madhushani2017feedback,
+  title={Feedback regularization and geometric pid control for trajectory tracking of mechanical systems: Hoop robots on an inclined plane},
+  author={Madhushani, TWU and Maithripala, DH Sanjeeva and Berg, Jordan M},
+  booktitle={2017 American Control Conference (ACC)},
+  pages={3938--3943},
+  year={2017},
+  organization={IEEE}
+}
+</pre>
+      </div>
+    </div>
+  </div>
+  <hr class="bottomrule" />
+</body>
+</head>

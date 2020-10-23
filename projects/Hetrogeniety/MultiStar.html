@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <title>Project Webpage</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "HelveticaNeue-Light", Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    h1 {
+      line-height: 1.3em;
+    }
+
+    a {
+      color: #d87d05;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #994301;
+    }
+
+    /* CSS for major elements */
+    .toprule {
+      margin-top: 0px;
+      border: 0;
+      height: 8px;
+      background: #eb8400;
+    }
+
+    .container {
+      max-width: 950px;
+      margin: 0px auto;
+    }
+
+    .container h1 {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 2em;
+    }
+
+    .container p {
+      text-align: center;
+      font-size: 1.2em;
+    }
+
+    .container p a {
+      margin: 20px;
+      text-decoration: none;
+    }
+
+    .flexcontainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .flexcontainer .author {
+      margin: 10px 20px;
+    }
+
+    .section-divider {
+      border: 0;
+      height: 0;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      margin: 20px 0px;
+    }
+
+    .image-container {
+      width: 90%;
+      margin: 10px auto;
+      text-align: center;
+    }
+
+    .image-container img {
+      width: 70%;
+    }
+
+    .image-container .caption {
+      font-style: oblique;
+      text-align: left;
+    }
+
+    .rel-work-list li {
+      margin: 10px, auto;
+      padding: 5px 10px;
+    }
+
+    pre,
+    code {
+      font-size: 0.9em;
+      border: 1px solid #e8e8e8;
+      border-radius: 3px;
+      background-color: #eef;
+    }
+
+    pre {
+      padding: 5px 10px;
+      overflow-x: auto;
+    }
+
+    .bottomrule {
+      margin-bottom: 0px;
+      border: 0;
+      height: 8px;
+      background: #eb8400;
+    }
+  </style>
+
+<body>
+  <hr class="toprule" />
+
+  <div class="top container">
+    <h1>Heterogeneous Explore-Exploit Strategies on Multi-Star Networks.</h1>
+    <div class="flexcontainer">
+      <div class="author">
+        Udari Madhushani <br />
+        Princeton Universiery
+      </div>
+      <div class="author">
+        Naomi Leonard <br />
+        Princeton Universiery
+      </div>
+    </div>
+
+    <div class="flexcontainer">
+      <!-- <div class="author">
+        ICLR workshop on Practical Machine Learning for Developing Countries
+        <a href="https://pml4dc.github.io/iclr2020/">PML4DC@ICLR</a> 2020
+      </div> -->
+    </div>
+
+    <p class="links">
+      <span><a href="https://arxiv.org/pdf/2009.01339.pdf">Pdf</a></span>
+      <span><a href="#bibtex">Bibtex</a></span>
+      <!-- <span><a href="https://pml4dc.github.io/iclr2020/pdf/PML4DC2020_11.pdf">Slides</a></span> -->
+    </p>
+    <hr class="section-divider" />
+  </div>
+
+  <div class="content container">
+    <h2>Overview</h2>
+    <div class="data">
+      We investigate the benefits of heterogeneity in multi-agent explore-exploit decision making where the goal of the
+      agents is to maximize cumulative group reward. To do so we study a class of distributed stochastic bandit problems
+      in which agents communicate over a multi-star network and make sequential choices among options in the same
+      uncertain environment. Typically, in multi-agent bandit problems, agents use homogeneous decision-making
+      strategies. However, group
+      performance can be improved by incorporating heterogeneity into the choices agents make, especially when the
+      network graph is irregular, i.e. when agents have different numbers of neighbors. We design and analyze new
+      heterogeneous explore-exploit strategies, using the multi-star as the model irregular network graph. The key idea
+      is to enable center agents to do more exploring than they would do using the homogeneous strategy, as a means of
+      providing more useful data to the peripheral agents.
+      In the case all agents broadcast their reward values and choices to their neighbors with the same probability, we
+      provide theoretical guarantees that group performance improves under the proposed heterogeneous strategies as
+      compared to under homogeneous strategies.
+    </div>
+    <div class="image-container">
+      <img src="MultistarProj.png" alt="project" />
+      <div class="caption">
+        Average expected cumulative group regret for 36 agents at time \(t=1000\) as a function of broadcasting
+        probability \(p\) with communication over a symmetric multi-star graph. Left corresponds to 2 center and 34
+        peripheral agents. Right corresponds to 3 center and 33 peripheral agents. Dotted lines and solid line shows
+        average regret when agents use heterogeneous and homogeneous sampling rules, respectively
+      </div>
+    </div>
+    <hr class="section-divider" />
+    <div class="content container">
+      <h2>Other related works</h2>
+      <div class="rel-work-list">
+        <ul>
+          <li>
+            <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8796036">Heterogeneous Stochastic
+              Interactions for Multiple Agents in a Multi-armed Bandit Problem.</a>
+            <br />
+            Udari Madhushani, Naomi Leonard; ECC 2019.
+          </li>
+          <li>
+            <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8418308">Collaborative Learning of
+              Stochastic Bandits over a
+              Social Network.</a>
+            <br />
+            Ravi Kumar Kolla, Krishna Jagannathan and Aditya Gopalan; IEEE/ACM Transactions on Networking, 2018.
+          </li>
+        </ul>
+      </div>
+      <hr class="section-divider" />
+    </div>
+    <div class="content container">
+      <h2 id="bibtex">Bibtex</h2>
+      <div class="data">
+        <pre>
+@article{madhushani2020multiStar,
+  title={Heterogeneous Explore-Exploit Strategies on Multi-Star Networks},
+  author={Madhushani, Udari and Leonard, Naomi Ehrich},
+  journal={under review},
+  year={2020}
+}
+</pre>
+      </div>
+    </div>
+  </div>
+  <hr class="bottomrule" />
+</body>
+</head>

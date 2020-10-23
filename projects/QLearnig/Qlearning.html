@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <title>Project Webpage</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "HelveticaNeue-Light", Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    h1 {
+      line-height: 1.3em;
+    }
+
+    a {
+      color: #d87d05;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #994301;
+    }
+
+    /* CSS for major elements */
+    .toprule {
+      margin-top: 0px;
+      border: 0;
+      height: 8px;
+      background: #eb8400;
+    }
+
+    .container {
+      max-width: 950px;
+      margin: 0px auto;
+    }
+
+    .container h1 {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 2em;
+    }
+
+    .container p {
+      text-align: center;
+      font-size: 1.2em;
+    }
+
+    .container p a {
+      margin: 20px;
+      text-decoration: none;
+    }
+
+    .flexcontainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .flexcontainer .author {
+      margin: 10px 20px;
+    }
+
+    .section-divider {
+      border: 0;
+      height: 0;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      margin: 20px 0px;
+    }
+
+    .image-container {
+      width: 90%;
+      margin: 10px auto;
+      text-align: center;
+    }
+
+    .image-container img {
+      width: 70%;
+    }
+
+    .image-container .caption {
+      font-style: oblique;
+      text-align: left;
+    }
+
+    .rel-work-list li {
+      margin: 10px, auto;
+      padding: 5px 10px;
+    }
+
+    pre,
+    code {
+      font-size: 0.9em;
+      border: 1px solid #e8e8e8;
+      border-radius: 3px;
+      background-color: #eef;
+    }
+
+    pre {
+      padding: 5px 10px;
+      overflow-x: auto;
+    }
+
+    .bottomrule {
+      margin-bottom: 0px;
+      border: 0;
+      height: 8px;
+      background: #eb8400;
+    }
+  </style>
+
+<body>
+  <hr class="toprule" />
+
+  <div class="top container">
+    <h1>Hamiltonian \(Q\)-Learning: Leveraging Importance-sampling for Data Efficient RL.</h1>
+    <div class="flexcontainer">
+      <div class="author">
+        Udari Madhushani <br />
+        Princeton Universiery
+      </div>
+      <div class="author">
+        Biswadip Dey <br />
+        Siemens
+      </div>
+      <div class="author">
+        Naomi Leonard <br />
+        Princeton Universiery
+      </div>
+      <div class="author">
+        Amit
+        Chakraborty <br />
+        Siemens
+      </div>
+    </div>
+
+    <!-- <div class="flexcontainer">
+      <div class="author">
+        <a href="https://neurips.cc/">NeurIPS</a> 2020 (short version in
+        <a href="https://trustworthyiclr20.github.io/">ICLR workshop on Trustworthy ML</a>
+        2020)
+      </div>
+    </div> -->
+
+    <p class="links">
+      <span><a href="https://drive.google.com/file/d/1c-QPPM2H_rVfw2PS9V6bW5p4CkXFrcyq/view?usp=sharing">Pdf</a></span>
+      <span><a href="#bibtex">Bibtex</a></span>
+    </p>
+    <hr class="section-divider" />
+  </div>
+
+  <div class="content container">
+    <h2>Overview</h2>
+    <div class="data">
+      Model-free reinforcement learning (RL), in particular \(Q\)-learning is widely used to learn optimal policies for
+      a
+      variety of planning and control problems. However, when the underlying state-transition dynamics are stochastic
+      and high-dimensional, \(Q\)-Learning requires a large amount of data and incurs a prohibitively high computational
+      cost. In this work, we introduce Hamiltonian \(Q\)-Learning, a data efficient modification of the \(Q\)-learning
+      approach, which adopts an importance-sampling based technique for computing the \(Q\) function. To exploit
+      stochastic structure of the state-transition dynamics, we employ Hamiltonian Monte Carlo to update \(Q\) function
+      estimates by approximating the expected future rewards using \(Q\) values associated with a subset of next states.
+      Further, to exploit the latent low-rank structure of the dynamic system, Hamiltonian \(Q\)-Learning uses a matrix
+      completion algorithm to reconstruct the updated \(Q\) function from \(Q\) value updates over a much smaller subset
+      of
+      state-action pairs. By providing an efficient way to apply \(Q\)-learning in stochastic, high-dimensional
+      problems,
+      the proposed approach broadens the scope of RL algorithms for real-world applications, including classical control
+      tasks and environmental monitoring.
+    </div>
+    <div class="image-container">
+      <img src="Cartpole.png" alt="project" />
+      <div class="caption">
+        Results are provided for a cartpole system. Figures (a), (b) and (c) show policy heat maps for
+        \(Q\)-Learning with exhaustive sampling, Hamiltonian \(Q\)-Learning and \(Q\)-Learning with IID sampling,
+        respectively. Figure (d) provides a comparison for convergence of \(Q\) function with
+        Hamiltonian \(Q\)-Learning and \(Q\)-Learning with IID sampling.
+      </div>
+    </div>
+
+    <hr class="section-divider" />
+    <div class="content container">
+      <h2>Application to adaptive ocean sampling</h2>
+      <div class="data">
+        Ocean sampling plays a major role in a variety of science and engineering problems, ranging from modeling marine
+        ecosystems to predicting global climate. Here, we consider the problem of using an under water glider to obtain
+        measurements of a scalar field (e.g., temperature, salinity or concentration of a certain zooplankton) and
+        illustrate how the use of Hamiltonian \(Q\)-Learning in planning the glider trajectory can lead to measurements
+        that minimize the uncertainty associated with the field.
+        <div class="image-container">
+          <img src="Ocean.png" alt="project" />
+          <div class="caption">
+            Figures (a), (b) and (c) show policy heat maps for
+            \(Q\)-Learning with exhaustive sampling, Hamiltonian \(Q\)-Learning and \(Q\)-Learning with IID sampling,
+            respectively. Figure (d) provides a comparison for convergence of \(Q\) function with
+            Hamiltonian \(Q\)-Learning and \(Q\)-Learning with IID sampling.
+          </div>
+        </div>
+      </div>
+      <hr class="section-divider" />
+    </div>
+    <div class="content container">
+      <h2>Other related works</h2>
+      <div class="rel-work-list">
+        <ul>
+          <li>
+            <a href="https://openreview.net/pdf?id=rklHqRVKvH">Harnessing Structures for Value-Based Planning and
+              Reinforcement Learning.</a>
+            <br />
+            JYuzhe Yang, Guo Zhang, Zhi Xu, Dina Katabi; ICLR 2020.
+          </li>
+          <li>
+            <a href="https://arxiv.org/pdf/2006.06135.pdf">Sample Efficient Reinforcement Learning via Low-Rank Matrix
+              Estimation.</a>
+            <br />
+            Devavrat Shah, Dogyoon Song, Zhi Xu, Yuzhe Yang; arXiv 2020.
+          </li>
+        </ul>
+      </div>
+      <hr class="section-divider" />
+    </div>
+    <div class="content container">
+      <h2 id="bibtex">Bibtex</h2>
+      <div class="data">
+        <pre>
+@article{madhushani2020QLearning,
+  title={Hamiltonian Q-Learning: Leveraging Importance-sampling for Data Efficient RL},
+  author={Madhushani, Udari and Dey, Biswadip and Leonard, Naomi Ehrich and Chakraborty, Amit},
+  conference={under review},
+  year={2020}
+}
+</pre>
+      </div>
+    </div>
+  </div>
+  <hr class="bottomrule" />
+</body>
+</head>

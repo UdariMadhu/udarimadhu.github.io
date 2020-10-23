@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <title>Project Webpage</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "HelveticaNeue-Light", Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    h1 {
+      line-height: 1.3em;
+    }
+
+    a {
+      color: #d87d05;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #994301;
+    }
+
+    /* CSS for major elements */
+    .toprule {
+      margin-top: 0px;
+      border: 0;
+      height: 8px;
+      background: #eb8400;
+    }
+
+    .container {
+      max-width: 950px;
+      margin: 0px auto;
+    }
+
+    .container h1 {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 2em;
+    }
+
+    .container p {
+      text-align: center;
+      font-size: 1.2em;
+    }
+
+    .container p a {
+      margin: 20px;
+      text-decoration: none;
+    }
+
+    .flexcontainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .flexcontainer .author {
+      margin: 10px 20px;
+    }
+
+    .section-divider {
+      border: 0;
+      height: 0;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      margin: 20px 0px;
+    }
+
+    .image-container {
+      width: 90%;
+      margin: 10px auto;
+      text-align: center;
+    }
+
+    .image-container img {
+      width: 70%;
+    }
+
+    .image-container .caption {
+      font-style: oblique;
+      text-align: left;
+    }
+
+    .rel-work-list li {
+      margin: 10px, auto;
+      padding: 5px 10px;
+    }
+
+    pre,
+    code {
+      font-size: 0.9em;
+      border: 1px solid #e8e8e8;
+      border-radius: 3px;
+      background-color: #eef;
+    }
+
+    pre {
+      padding: 5px 10px;
+      overflow-x: auto;
+    }
+
+    .bottomrule {
+      margin-bottom: 0px;
+      border: 0;
+      height: 8px;
+      background: #eb8400;
+    }
+  </style>
+
+<body>
+  <hr class="toprule" />
+
+  <div class="top container">
+    <h1>A Dynamic Observation Strategy for Multi-agent Multi-armed Bandit Problem.</h1>
+    <div class="flexcontainer">
+      <div class="author">
+        Udari Madhushani <br />
+        Princeton Universiery
+      </div>
+      <div class="author">
+        Naomi Leonard <br />
+        Princeton Universiery
+      </div>
+    </div>
+
+    <div class="flexcontainer">
+      <div class="author">
+        European Control Conference
+        <a href="https://ecc20.eu/">ECC</a> 2020
+      </div>
+    </div>
+
+    <p class="links">
+      <span><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9143736">Pdf</a></span>
+      <span><a href="#bibtex">Bibtex</a></span>
+      <span><a
+          href="https://drive.google.com/file/d/1D3aqCy27YeI6AdNjhDMpacg7iNB9dQ_u/view?usp=sharing">Slides</a></span>
+      <span><a href="https://youtu.be/TuAr4MS4G14">Video</a></span>
+    </p>
+    <hr class="section-divider" />
+  </div>
+
+  <div class="content container">
+    <div class="data">
+      <div class="image-container">
+        <iframe width="850" height="420" src="https://www.youtube.com/embed/TuAr4MS4G14">
+        </iframe>
+        <!-- <img src="documents/teaser.png" alt="project" /> -->
+      </div>
+      <h2>Overview</h2>
+      We define and analyze a multi-agent multi-armed bandit problem in which decision-making agents can observe the
+      choices and rewards of their neighbors under a linear observation cost. Neighbors are defined by a network graph
+      that encodes the inherent observation constraints of the system. We define a cost associated with observations
+      such that at every instance an agent makes an observation it receives a constant observation regret. We design a
+      sampling algorithm and an observation protocol for each agent to maximize its own expected cumulative reward
+      through minimizing expected cumulative sampling regret and expected cumulative observation regret. For our
+      proposed protocol, we prove that total cumulative regret is logarithmically bounded.
+    </div>
+    <hr class="section-divider" />
+    <div class="content container">
+      <h2>Other related works</h2>
+      <div class="rel-work-list">
+        <ul>
+          <li>
+            <a href="https://pml4dc.github.io/iclr2020/papers/PML4DC2020_11.pdf">Distributed Learning: Sequential
+              Decision Making in Resource-Constrained Environments.</a>
+            <br />
+            Udari Madhushani, Naomi Leonard; PML4DC@ICLR 2020.
+          </li>
+          <li>
+            <a href="https://openreview.net/pdf?id=SJxZnR4YvB">Distributed Bandit Learning: Near-Optimal Regret with
+              Efficient Communication.</a>
+            <br />
+            Yuanhao Wang, Jiachen Hu, Xiaoyu Chen, Liwei Wang; ICLR 2020.
+          </li>
+        </ul>
+      </div>
+      <hr class="section-divider" />
+    </div>
+    <div class="content container">
+      <h2 id="bibtex">Bibtex</h2>
+      <div class="data">
+        <pre>
+@inproceedings{madhushani2020dynnamic,
+  title={A Dynamic Observation Strategy for Multi-agent Multi-armed Bandit Problem},
+  author={Madhushani, Udari and Leonard, Naomi Ehrich},
+  booktitle={2020 19th European Control Conference (ECC)},
+  pages={1677-1682},
+  year={2020},
+  organization={IEEE}
+}
+</pre>
+      </div>
+    </div>
+  </div>
+  <hr class="bottomrule" />
+</body>
+</head>
