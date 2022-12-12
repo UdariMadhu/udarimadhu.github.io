@@ -168,6 +168,8 @@ h3 {
   grid-template-columns: 1fr 8fr;
   text-align: left;
   column-gap: 30px;
+  overflow: scroll;
+  height: 400px;
 }
 
 .news .month {
@@ -177,6 +179,15 @@ h3 {
   text-align: left;
 }
 
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
 
 .pubs-section-box {
   display: grid;
